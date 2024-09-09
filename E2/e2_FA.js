@@ -53,106 +53,11 @@ const audio_check = {
 
 timeline.push(preload, enter_fullscreen, irb, audio_check)
 
-// EXPERIMENT PHASES
-// 1. Study block
-//    - Hear a sentence with a prompt box
-//    - prompt reminds them which "area" they're in
-//    - 1-second ISI
-// 2. Math-verification filler task
-//    - Participant sees an equation and responds true or false
-//    - Use D and K keys to respond 
-// 3. Test block
-//    - See a stimulus sentence, decide if it's old or new
-
 // // // // // // // // // // // // 
 // STUDY BLOCK
 // // // // // // // // // // // 
 
-let study_instructions_1 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div><p class="instructions">We're now ready to begin the experiment. <br><br>
-    <span style="color: white;">There will be three parts of the experiment.<br><br>
-    In the first part, you will go on an imaginary tour of 
-    four different public spaces while a tour guide describes
-    the space to you. <br><br>
-    As your tour guide tells you about the space, try to 
-    imagine your surroundings. <br><br>
-    After you hear each sentence, you can press the space bar 
-    to continue.<br><br></span>
-    Press the space bar to continue.</p><div>
-  `,
-  choices: [' '] 
-};
 
-let study_instructions_2 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div><p class="instructions">We're now ready to begin the experiment. <br><br>
-    There will be three parts of the experiment.<br><br>
-    <span style="color: white;">In the first part, you will go on an imaginary tour of 
-    four different public spaces while a tour guide describes
-    the space to you. <br><br>
-    As your tour guide tells you about the space, try to 
-    imagine your surroundings. <br><br>
-    After you hear each sentence, you can press the space bar 
-    to continue.<br><br></span>
-    Press the space bar to continue.</p><div>
-  `,
-  choices: [' ']
-};
-
-let study_instructions_3 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div><p class="instructions">We're now ready to begin the experiment. <br><br>
-    There will be three parts of the experiment.<br><br>
-    In the first part, you will go on an imaginary tour of 
-    four different public spaces while a tour guide describes
-    the space to you. <br><br>
-    <span style="color: white;">As your tour guide tells you about the space, try to 
-    imagine your surroundings. <br><br>
-    After you hear each sentence, you can press the space bar 
-    to continue.<br><br></span>
-    Press the space bar to continue.</p><div>
-  `,
-  choices: [' ']
-};
-
-let study_instructions_4 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div><p class="instructions">We're now ready to begin the experiment. <br><br>
-    There will be three parts of the experiment.<br><br>
-    In the first part, you will go on an imaginary tour of 
-    four different public spaces while a tour guide describes
-    the space to you. <br><br>
-    As your tour guide tells you about the space, try to 
-    imagine your surroundings. <br><br>
-    <span style="color: white;">After you hear each sentence, you can press the space bar 
-    to continue.<br><br></span>
-    Press the space bar to continue.</p><div>
-  `,
-  choices: [' ']
-};
-
-let study_instructions_5 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
-    <div><p class="instructions">We're now ready to begin the experiment. <br><br>
-    There will be three parts of the experiment.<br><br>
-    In the first part, you will go on an imaginary tour of 
-    four different public spaces while a tour guide describes
-    the space to you. <br><br>
-    As your tour guide tells you about the space, try to 
-    imagine your surroundings. <br><br>
-    After you hear each sentence, you can press the space bar 
-    to continue.<br><br>
-    Press the space bar to begin the experiment.</p><div>
-  `,
-  choices: [' '],
-  post_trial_gap: 1000
-};
 
 timeline.push(study_instructions_1, study_instructions_2, study_instructions_3, study_instructions_4, study_instructions_5)
 

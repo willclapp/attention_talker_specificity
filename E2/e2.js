@@ -12,6 +12,7 @@ const preload = {
   images: preload_imgs
 }
 
+
 const enter_fullscreen = {
   type: jsPsychFullscreen,
   fullscreen_mode: true,
@@ -155,6 +156,9 @@ for (let i = 0; i < n_cats; i++) {
 // TEST BLOCK
 // // // // // // // // // // // 
 
+let d_ans = button_order == "OLD_NEW" ? "TRUE" : "FALSE"
+let k_ans = button_order == "OLD_NEW" ? "FALSE" : "TRUE"
+
 for (let i=0; i<test_instructions.length; i++) {
   timeline.push(test_instructions[i])
 }
@@ -164,10 +168,7 @@ for (let i = 0; i < frames.length; i++) {
   const test_intro = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: function() {
-      return `
-        <div><p class="space">
-        Try to remember the tour of the <em><b>${space}</b></em>. Compare the images and decide which is TRUE based on what you remember from your tour of the ${space}. <br><br>Please respond as quickly and accurately as possible. If you do not respond within 5 seconds, the experiment will progress automatically.<br><br>Place your fingers on the 'D' and 'K' keys and then press the spacebar to continue. The first images will appear in 5 seconds. </p><div>
-      `
+      return `<div><p class="space"> Try to remember the tour of the <em><b>${space}</b></em>. Read each sentence carefully and decide whether it's TRUE or FALSE based on what you remember from your tour of the ${space}. <br><br> Please respond as quickly and accurately as possible. If you do not respond within 4 seconds, the experiment will progress automatically. <br><br>Place your fingers on the 'D' and 'K' keys and then press the  spacebar to continue. The first sentence will appear in 5 seconds.  </p><div>`
     },
     choices: [" "]
   }
@@ -176,28 +177,17 @@ for (let i = 0; i < frames.length; i++) {
     stimulus: '../audio/silence.wav',
     response_allowed_while_playing: false,
     prompt: function() {
-      return `<div class="math-container test_container">
-                  <em>Which image is TRUE based on what you remember hearing about the <b>${space}</b>?<br><br></em>
-                  <div class="option-container-test">
-                  <p class="option-test"><img src="../img/jpgs/blank.jpg" width="320" height="320" class="img-test">Press D</p>
-                  <p class="option-test"><img src="../img/jpgs/blank.jpg" width="320" height="320" class="img-test">Press K</p>
-                  </div></div>`
+      return `<div class="math-container test_container"><em>Is this sentence true based on what you remember hearing about the <b>${space}</b>?<br><br></em><p class="test_sentence test_sentence_iti">Filler</p><div class="option-container-test"><p class="option">Press D<br><b>${d_ans}</b></p><p class="option">Press K<br><b>${k_ans}</b></p></div></div>`
     },
     choices: [''],
     trial_duration: 5000
   }
-
   const test_procedure = {
     timeline: [
       {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: function() {
-          return `<div class="math-container test_container">
-                  <em>Which image is TRUE based on what you remember hearing about the <b>${space}</b>?<br><br></em>
-                  <div class="option-container-test">
-                  <p class="option-test"><img src="${jsPsych.timelineVariable('left_image')}" width="320" height="320" class="img-test">Press D</p>
-                  <p class="option-test"><img src="${jsPsych.timelineVariable('right_image')}" width="320" height="320" class="img-test">Press K</p>
-                  </div></div>`
+          return `<div class="math-container test_container"><em>Is this sentence true based on what you remember hearing about the <b>${space}</b>?<br><br></em><p class="test_sentence">${jsPsych.timelineVariable('sentence')}</p><div class="option-container-test"><p class="option">Press D<br><b>${d_ans}</b></p><p class="option">Press K<br><b>${k_ans}</b></p></div></div>`
         },
         trial_duration: 5000,
         choices: ['d','k'],
@@ -209,10 +199,7 @@ for (let i = 0; i < frames.length; i++) {
           code: jsPsych.timelineVariable('code'),
           sentence: jsPsych.timelineVariable('sentence'),
           talker: jsPsych.timelineVariable('talker'),
-          correct_side: jsPsych.timelineVariable('correct_side'),
-          left_image: jsPsych.timelineVariable('left_image'),
-          right_image: jsPsych.timelineVariable('right_image'),
-          condition: function() {return attention_condition},
+          repeated: jsPsych.timelineVariable('repeated'),
           phase: "test",
           block: i + 4,
           button_order: function() {return button_order}
@@ -223,12 +210,7 @@ for (let i = 0; i < frames.length; i++) {
         stimulus: '../audio/silence.wav',
         response_allowed_while_playing: false,
         prompt: function() {
-          return `<div class="math-container test_container">
-                  <em>Which image is TRUE based on what you remember hearing about the <b>${space}</b>?<br><br></em>
-                  <div class="option-container-test">
-                  <p class="option-test"><img src="../img/jpgs/blank.jpg" width="320" height="320" class="img-test">Press D</p>
-                  <p class="option-test"><img src="../img/jpgs/blank.jpg" width="320" height="320" class="img-test">Press K</p>
-                  </div></div>`
+          return `<div class="math-container test_container"><em>Is this sentence true based on what you remember hearing about the <b>${space}</b>?<br><br></em><p class="test_sentence test_sentence_iti">${jsPsych.timelineVariable('sentence')}</p><div class="option-container-test"><p class="option">Press D<br><b>${d_ans}</b></p><p class="option">Press K<br><b>${k_ans}</b></p></div></div>`
         },
         choices: [''],
         trial_duration: 1500
