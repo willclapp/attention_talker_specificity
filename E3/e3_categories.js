@@ -1,5 +1,5 @@
 let start_time = 0
-let duration = 180 * 1000
+let duration = 18 * 1000
 let n_cats = 32
 let n_items = 12
 

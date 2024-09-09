@@ -79,7 +79,7 @@ for (let i = 0; i < alts_array.length; i++) {
     study_trial.sentence = curr_study_trial.sentence
     study_trial.talker = talker_order[i]
     let rec = recordings.find(obj => obj.talker === talker_order[i] & obj.code === study_trial.code)
-    study_trial.audio_path = `../audio/${talker_order[i]}/${study_trial.code}_${talker_order[i]}_${rec.recording}.wav`
+    study_trial.audio_path = `../audio/${talker_order[i]}/meaning/${study_trial.code}_${talker_order[i]}_${rec.recording}.wav`
     preload_audio.push(study_trial.audio_path)
     study_trial_array.push(study_trial)
 

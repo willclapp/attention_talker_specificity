@@ -29,7 +29,7 @@ const irb = {
 
 const audio_check = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: `<div class="instructions">This experiment uses audio. Please make sure that your headphones are plugged in and that your volume is turned up. The audio below is similar to what you'll hear in the experiment, so you can play it as many times as you need while you adjust your volume to a comfortable level.<br><br> <audio controls src="../audio/pred_mirror_2_AnF.wav"></audio></div>`,
+  stimulus: `<div class="instructions">This experiment uses audio. Please make sure that your headphones are plugged in and that your volume is turned up. The audio below is similar to what you'll hear in the experiment, so you can play it as many times as you need while you adjust your volume to a comfortable level.<br><br> <audio controls src="../audio/test.wav"></audio></div>`,
   choices: ['Continue']
 }
 
@@ -135,11 +135,11 @@ for (let i = 0; i < frames.length; i++) {
     ],
     timeline_variables: study_blocks[i]
   }
-  if (attention_condition==="FA") {
-    timeline.push(study_intro, study_procedure)
-  } else {
-    timeline.push(study_intro, first_number, study_procedure)
-  }
+  // if (attention_condition==="FA") {
+  //   timeline.push(study_intro, study_procedure)
+  // } else {
+  //   timeline.push(study_intro, first_number, study_procedure)
+  // }
   
 }
 
