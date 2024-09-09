@@ -30,7 +30,7 @@ const irb = {
 
 const audio_check = {
   type: jsPsychHtmlButtonResponse,
-  stimulus: `<div class="instructions">This experiment uses audio. Please make sure that yourheadphones are plugged in and that your volume is turnedup. The audio below is similar to what you'll hear in theexperiment, so you can play it as many times as you needwhile you adjust your volume to a comfortable level.<br><br><audio controls src="../audio/pred_mirror_2_AnF.wav"></audio></div>`,
+  stimulus: `<div class="instructions">This experiment uses audio. Please make sure that yourheadphones are plugged in and that your volume is turnedup. The audio below is similar to what you'll hear in theexperiment, so you can play it as many times as you needwhile you adjust your volume to a comfortable level.<br><br><audio controls src="../audio/test.wav"></audio></div>`,
   choices: ['Continue']
 }
 

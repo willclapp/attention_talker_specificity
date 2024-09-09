@@ -59,7 +59,7 @@ for (let i=0; i<n_study; i++) {
     curr_trial.sentence = trial_info.sentence
     curr_trial.recording = trial_info[talker]
     curr_trial.order = i + 1
-    curr_trial.audio_path = `../audio/${talker}/normalized/${code}_${talker}_${curr_trial.recording}.wav`
+    curr_trial.audio_path = `../audio/${talker}/form/${code}_${talker}_${curr_trial.recording}.wav`
     study_trials.push(curr_trial)
     preload_audio.push(curr_trial.audio_path)
 }
@@ -105,9 +105,8 @@ for (let i=0; i<n_test; i++) {
     curr_trial.recording = trial_info[talker]
     curr_trial.order = i + 1
     curr_trial.repeated = repeated
-    curr_trial.audio_path = `../audio/${talker}/normalized/${code}_${talker}_${curr_trial.recording}.wav`
+    curr_trial.audio_path = `../audio/${talker}/form/${code}_${talker}_${curr_trial.recording}.wav`
     test_trials.push(curr_trial)
     preload_audio.push(curr_trial.audio_path)
 }
-
 

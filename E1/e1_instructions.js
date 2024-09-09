@@ -5,7 +5,7 @@
 let study_instructions_1_FA = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br><span style="color: white;">In the first part, you will listen to a series of sentences. After each sentence plays, press the space bar to continue.<br><br>Listen closely to the sentences, and try visualize them as you hear them.<br><br>You will hear about 30 sentences. </span><br><br> Click to continue.</p><div>
+      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br><span style="color: white;">In the first part, you will listen to a series of sentences. After each sentence plays, press the spacebar to continue.<br><br>Listen closely to the sentences, and try visualize them as you hear them.<br><br>You will hear about 32 sentences. </span><br><br> Click to continue.</p><div>
     `,
   choices: ['Continue']
   };
@@ -13,7 +13,7 @@ let study_instructions_1_FA = {
 let study_instructions_2_FA = {
 type: jsPsychHtmlButtonResponse,
 stimulus: `
-    <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the space bar to continue.<br><br><span style="color: white;">Listen closely to the sentences, and try visualize them as you hear them.<br><br>You will hear about 30 sentences. </span><br><br> Click to continue.</p><div>
+    <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the spacebar to continue.<br><br><span style="color: white;">Listen closely to the sentences, and try visualize them as you hear them.<br><br>You will hear about 32 sentences. </span><br><br> Click to continue.</p><div>
 `,
 choices: ['Continue']
 };
@@ -21,7 +21,7 @@ choices: ['Continue']
 let study_instructions_3_FA = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the space bar to continue.<br><br>Listen closely to the sentences, and try visualize them as you hear them.<span style="color: white;"><br><br>You will hear about 30 sentences. </span><br><br> Click to continue.</p><div>
+      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the spacebar to continue.<br><br>Listen closely to the sentences, and try visualize them as you hear them.<span style="color: white;"><br><br>You will hear about 32 sentences. </span><br><br> Click to continue.</p><div>
   `,
   choices: ['Continue']
 };
@@ -29,7 +29,7 @@ let study_instructions_3_FA = {
 let study_instructions_4_FA = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the space bar to continue. <br><br>Listen closely to the sentences, and try visualize them as you hear them. <br><br>You will hear about 30 sentences.<br><br> Click to continue.</p><div>
+      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the spacebar to continue. <br><br>Listen closely to the sentences, and try visualize them as you hear them. <br><br>You will hear about 32 sentences.<br><br> Click to continue.</p><div>
   `,
   choices: ['Continue']
 };
@@ -37,7 +37,7 @@ let study_instructions_4_FA = {
 let study_instructions_5_FA = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the space bar to continue.<br><br>Listen closely to the sentences, and try visualize them as you hear them.<br><br>You will hear about 30 sentences. <br><br> When you're ready to begin, click below.</p><div>
+      <div><p class="instructions">We're now ready to begin the experiment. There will be three parts.<br><br>In the first part, you will listen to a series of sentences. After each sentence plays, press the spacebar to continue.<br><br>Listen closely to the sentences, and try visualize them as you hear them.<br><br>You will hear about 32 sentences. <br><br> When you're ready to begin, click below.</p><div>
   `,
   choices: ['Click to begin'],
   post_trial_gap: 1000
@@ -170,7 +170,7 @@ let new_key = button_order == "OLD_NEW" ? "K" : "D"
 let test_instructions_1 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br><span style="color: white">About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br><span style="color: white">About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -178,7 +178,7 @@ let test_instructions_1 = {
 let test_instructions_2 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br><span style="color: white">If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br><span style="color: white">If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -186,7 +186,7 @@ let test_instructions_2 = {
 let test_instructions_3 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br><span style="color: white">If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br><span style="color: white">If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -194,7 +194,7 @@ let test_instructions_3 = {
 let test_instructions_4 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<span style="color: white"><br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<span style="color: white"><br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -202,7 +202,7 @@ let test_instructions_4 = {
 let test_instructions_5 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <span style="color: white"><br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <span style="color: white"><br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -210,7 +210,7 @@ let test_instructions_5 = {
 let test_instructions_6 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <span style="color: white"><br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <span style="color: white"><br><br><b><i>Please respond as quickly and as accurately as possible.</i></b></span> <br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -218,7 +218,7 @@ let test_instructions_6 = {
 let test_instructions_7 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b><br><br>Press the space bar to continue.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b><br><br>Press the spacebar to continue.<div>`
   },
   choices: [' ']
 }
@@ -226,7 +226,7 @@ let test_instructions_7 = {
 let test_instructions_8 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function() {
-    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 60 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b> <br><br>When you're ready to begin the experiment, press the space bar.<div>`
+    return `<div><p class="instructions">In the final part of this experiment, you'll hear sentences again.<br><br>About half of the sentences are sentences you heard in the first part of this experiment, and half are new sentences that you didn't hear before. <br><br>If you hear a sentence you remember from the beginning of the experiment, press the '${old_key}' key to indicate that the sentence is OLD. <br><br>If you think that it's your first time hearing the sentence (i.e., that you did not hear it in the first part), press the '${new_key}' key to indicate that it's NEW.<br><br>You will hear about 64 sentences. <br><br>If you don't respond within 4 seconds, the trial will advance automatically. <br><br><b><i>Please respond as quickly and as accurately as possible.</i></b> <br><br>When you're ready to begin the experiment, press the spacebar.<div>`
   },
   choices: [' ']
 }
