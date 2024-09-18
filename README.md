@@ -8,4 +8,4 @@ Experiment 1 is a study/test recognition memory experiment with spoken sentences
 2. [Experiment 2](https://willclapp.github.io/attention_talker_specificity/E2/e2.html)
 3. [Experiment 3](https://willclapp.github.io/attention_talker_specificity/E3/e3.html)
 
-Data and analysis scripts are also publicly available on Mendeley Data, [linked here](https://data.mendeley.com/dahttps://data.mendeley.com/datasets/788t4psbhy/1tasets/788t4psbhy/1).
+Data and analysis scripts are also publicly available on Mendeley Data, [linked here](https://data.mendeley.com/datasets/788t4psbhy/1).
